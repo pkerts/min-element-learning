@@ -12,6 +12,15 @@ public:
 	void Print();
 	int pop();
 private:
-	std::vector<int> ints;
+	struct Node
+	{
+		int value;
+	};
+	std::vector<Node> ints;
+	/*struct comp
+	{
+		bool operator()(int l, int r)
+			return l > r;
+	};*/
 };
 
