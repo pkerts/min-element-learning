@@ -1,6 +1,6 @@
 #include "Cool.h"
 #include <iostream>
-
+#include <algorithm>
 
 Cool::Cool()
 {
@@ -37,14 +37,15 @@ void Cool::Print()
 
 int Cool::pop()
 {
-	// auto min = std::min 
-	return 0;
+	auto minmax_value = std::min_element(ints.begin(), ints.end(),
+		[](Node const& lhs, Node const& rhs) {return lhs.value < rhs.value; });
+	return minmax_value->value;
 }
 
 auto main()->int {
 	Cool mel; // (min_element_learning)
 	mel.fillvector();
 	mel.Print();
-
+	std::cout << std::endl << mel.pop();
 	return 0;
 }

@@ -4,23 +4,25 @@
 
 class Cool
 {
-public:
-	Cool();
-	~Cool();
-
-	void fillvector();
-	void Print();
-	int pop();
 private:
 	struct Node
 	{
 		int value;
 	};
 	std::vector<Node> ints;
-	/*struct comp
-	{
-		bool operator()(int l, int r)
-			return l > r;
-	};*/
-};
 
+
+public:
+	Cool();
+	~Cool();
+	/*bool comp(Node const& l, Node const& r)
+	{
+		return l->value > r->value;
+	}*/
+
+	void fillvector();
+	void Print();
+	int pop();
+
+
+};
