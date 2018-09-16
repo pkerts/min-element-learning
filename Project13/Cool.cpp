@@ -30,7 +30,7 @@ void Cool::Print()
 
 int Cool::pop()
 {
-	// auto min = std::min
+	// auto min = std::min 
 	return 0;
 }
 
